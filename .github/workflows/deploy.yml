@@ -26,4 +26,4 @@ jobs:
         run: aws s3 sync . s3://rares-neacsu-resume-2026 --delete --exclude ".git*"
 
       - name: Invalidate CloudFront
-        run: aws cloudfront create-invalidation --distribution-id E1ZJQM9Y8QU1F2 --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id EVMLOHDN8FWVE --paths "/*"
