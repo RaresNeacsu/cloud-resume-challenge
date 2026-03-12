@@ -44,6 +44,18 @@
             <p>Page Views: <span id="counter">Loading...</span></p>
         </footer>
     </div>
+    <script>
+        async function getCounter() {
+            try {
+                let response = await fetch('https://zdeqwawhkb.execute-api.us-east-1.amazonaws.com/get');
+                let data = await response.json();
+                document.getElementById('counter').innerText = data.count;
+            } catch (error) {
+                console.log("Error fetching counter:", error);
+            }
+        }
+        getCounter();
+    </script>
 </body>
 
 </html>
